@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace InternetProvider.Data.Models
 {
     /// <summary>
-    /// Describe each Car
+    /// Description of each machine
     /// </summary>
     public class Car
     {
