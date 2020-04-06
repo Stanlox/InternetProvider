@@ -1,0 +1,16 @@
+﻿
+<!DOCTYPE html>
+
+
+    <h1>Все тарифы</h1>
+    <h3>@Model.currCategory</h3>
+    @{ 
+        foreach (var item in Model.AllCars)
+        {
+             <div>
+                 <h2>Модель: @item.name</h2>
+                 <p>Цены: @item.price.ToString("c")</p>
+             </div>
+        }
+    }
+

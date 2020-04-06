@@ -1,4 +1,5 @@
 ﻿using InternetProvider.Data.Interfaces;
+using InternetProvider.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,11 @@ namespace InternetProvider.Controllers
 
         public ViewResult List()
         {
-            var cars = _allCars.Cars;
-            return View(cars);
+            ViewBag.Title = "Страница с тарифами";
+            CarsListViewModel obj = new CarsListViewModel();
+            obj.AllCars = _allCars.Cars;
+            obj.currCategory = "Тарифы";
+            return View(obj);
         }
     }
 }
